@@ -7,11 +7,11 @@
 	(title_block
 		(title "Shutter Motor Retro Fit")
 		(date "2024-11-10")
-		(rev "V0.1")
+		(rev "V1.0")
 		(company "TowKnee")
 	)
 	(lib_symbols
-		(symbol "Connector:Conn_01x01_Pin"
+		(symbol "Connector:Conn_01x02_Pin"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -27,8 +27,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x01_Pin"
-				(at 0 -2.54 0)
+			(property "Value" "Conn_01x02_Pin"
+				(at 0 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -53,7 +53,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x01, script generated"
+			(property "Description" "Generic connector, single row, 01x02, script generated"
 				(at 0 0 0)
 				(effects
 					(font
@@ -88,10 +88,21 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x01_Pin_1_1"
+			(symbol "Conn_01x02_Pin_1_1"
 				(rectangle
 					(start 0.8636 0.127)
 					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -112,6 +123,18 @@
 						(type none)
 					)
 				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
 					(at 5.08 0 180)
 					(length 3.81)
@@ -123,6 +146,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3320,6 +3361,16 @@
 		)
 		(uuid da5ddb26-13f9-4d03-8b6a-94fdfa0ab590)
 	)
+	(text "Add support for a foot pedal type external control instead of front panel buttons"
+		(exclude_from_sim no)
+		(at 108.204 -6.604 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "061af122-bc8a-4868-b905-2a31954e1164")
+	)
 	(text "Button pannel buttons should be pulling to ground"
 		(exclude_from_sim no)
 		(at 73.152 195.834 0)
@@ -3361,9 +3412,9 @@
 		)
 		(uuid "8170b616-f2be-4c86-bbfb-544630930561")
 	)
-	(text "Sensor accessory"
+	(text "Accessory"
 		(exclude_from_sim no)
-		(at 110.49 166.37 0)
+		(at 110.236 164.592 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3433,7 +3484,7 @@
 	)
 	(text "Boot and Reset"
 		(exclude_from_sim no)
-		(at 129.54 166.37 0)
+		(at 146.812 164.592 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3452,6 +3503,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2e61677a-ec85-4495-9ae5-3edd0d3ec0ee")
+	)
+	(junction
+		(at 267.97 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "31e3ff02-338a-4d31-84ae-e50679e80447")
+	)
+	(junction
+		(at 26.67 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a663f8e-9868-4be3-a4f5-283ee3427202")
 	)
 	(junction
 		(at 226.06 55.88)
@@ -3520,10 +3583,10 @@
 		(uuid "9af880ba-cfa7-4cff-85b4-36668e7a9491")
 	)
 	(junction
-		(at 278.13 157.48)
+		(at 26.67 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9cf0ec40-7d96-40e1-b015-cc2d2233abfa")
+		(uuid "a1d38405-52d1-4782-9b9a-7f45b5d30454")
 	)
 	(junction
 		(at 226.06 50.8)
@@ -3567,11 +3630,61 @@
 		(color 0 0 0 0)
 		(uuid "e89ba671-4ea6-4ac5-a91d-047b7bfd896b")
 	)
-	(junction
-		(at 267.97 36.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fb064e33-e4c8-4362-83c2-d7002e3949d1")
+	(no_connect
+		(at 48.26 46.99)
+		(uuid "08867c2a-a851-490e-ba66-f0415cfd873e")
+	)
+	(no_connect
+		(at 17.78 69.85)
+		(uuid "1b086edd-f859-4185-83d9-fbf5ee011278")
+	)
+	(no_connect
+		(at 48.26 52.07)
+		(uuid "2f1cffc1-9571-4325-adad-db08b43e1554")
+	)
+	(no_connect
+		(at 48.26 49.53)
+		(uuid "62c5aea6-6a04-4017-9bb6-ed588cc77f43")
+	)
+	(no_connect
+		(at 17.78 80.01)
+		(uuid "6e44090c-413f-4fd9-858d-f4f61e8c55a1")
+	)
+	(no_connect
+		(at 17.78 67.31)
+		(uuid "75fd013e-a869-4fb5-82bb-c45c2778deb7")
+	)
+	(no_connect
+		(at 48.26 59.69)
+		(uuid "b4305d02-467d-4b12-84ee-0f9f5d3f3c68")
+	)
+	(no_connect
+		(at 17.78 74.93)
+		(uuid "bfdbf839-b1c9-43a5-9622-6c9d406e6392")
+	)
+	(no_connect
+		(at 48.26 62.23)
+		(uuid "c1abc0ef-ebef-455f-a8ed-caac00a6eb96")
+	)
+	(no_connect
+		(at 109.22 182.88)
+		(uuid "c955dc79-115a-4962-a69c-f0b92825836e")
+	)
+	(no_connect
+		(at 48.26 41.91)
+		(uuid "cb8f447c-c344-41a5-9efe-f9e6a24e1978")
+	)
+	(no_connect
+		(at 17.78 72.39)
+		(uuid "d4869904-3463-4d86-bd09-2cc17a6563a8")
+	)
+	(no_connect
+		(at 48.26 64.77)
+		(uuid "de0e3342-f7ee-481d-960b-278c399f80df")
+	)
+	(no_connect
+		(at 17.78 77.47)
+		(uuid "f6b68237-7efb-4177-80a7-81162710cb3c")
 	)
 	(wire
 		(pts
@@ -3592,6 +3705,16 @@
 			(type default)
 		)
 		(uuid "093896d1-f2cf-4041-a71b-c687f46ec85a")
+	)
+	(wire
+		(pts
+			(xy 25.4 173.99) (xy 26.67 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09c1a707-8e69-40df-9473-f1645240826f")
 	)
 	(wire
 		(pts
@@ -3642,6 +3765,16 @@
 			(type default)
 		)
 		(uuid "18144d3c-77ab-4f54-8055-9bc6b9986826")
+	)
+	(wire
+		(pts
+			(xy 269.24 36.83) (xy 267.97 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cd99c8b-2752-4ece-93ab-101ee9506d85")
 	)
 	(wire
 		(pts
@@ -3742,16 +3875,6 @@
 			(type default)
 		)
 		(uuid "35d34baa-7daf-4610-a7fc-5017e363b2b5")
-	)
-	(wire
-		(pts
-			(xy 267.97 36.83) (xy 269.24 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "39ca6cf1-2091-4d46-acf6-ab4a22da20f1")
 	)
 	(wire
 		(pts
@@ -3935,6 +4058,16 @@
 	)
 	(wire
 		(pts
+			(xy 26.67 176.53) (xy 26.67 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5db64219-6c2e-45a2-a27d-4470c3d10ca8")
+	)
+	(wire
+		(pts
 			(xy 57.15 180.34) (xy 62.23 180.34)
 		)
 		(stroke
@@ -3955,13 +4088,33 @@
 	)
 	(wire
 		(pts
-			(xy 267.97 36.83) (xy 267.97 38.1)
+			(xy 25.4 182.88) (xy 26.67 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6067ab8f-c9a6-468d-8f5b-0ead832e58fa")
+	)
+	(wire
+		(pts
+			(xy 267.97 35.56) (xy 267.97 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "615d9a67-6de4-4aae-a505-f683951f8e9e")
+	)
+	(wire
+		(pts
+			(xy 25.4 180.34) (xy 26.67 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "623326fe-41b6-4745-b926-26dcc093ea9f")
 	)
 	(wire
 		(pts
@@ -4015,13 +4168,13 @@
 	)
 	(wire
 		(pts
-			(xy 267.97 35.56) (xy 267.97 36.83)
+			(xy 26.67 181.61) (xy 26.67 182.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6825ed5e-1969-45ad-a8aa-c1fceaa3f72d")
+		(uuid "651eb052-c13d-4e83-aa00-faed0419d512")
 	)
 	(wire
 		(pts
@@ -4085,16 +4238,6 @@
 	)
 	(wire
 		(pts
-			(xy 278.13 157.48) (xy 278.13 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "78983cf7-0e86-4ee7-b9f4-2f2de16d7bb7")
-	)
-	(wire
-		(pts
 			(xy 271.78 154.94) (xy 271.78 157.48)
 		)
 		(stroke
@@ -4135,6 +4278,16 @@
 	)
 	(wire
 		(pts
+			(xy 26.67 175.26) (xy 26.67 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "850427c9-1ef8-45d9-bd55-3cb08b621cb9")
+	)
+	(wire
+		(pts
 			(xy 252.73 101.6) (xy 255.27 101.6)
 		)
 		(stroke
@@ -4142,6 +4295,16 @@
 			(type default)
 		)
 		(uuid "85b56849-eefd-46e8-9f1f-a3de6a71332a")
+	)
+	(wire
+		(pts
+			(xy 267.97 36.83) (xy 267.97 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "870e5c41-02cf-4cbd-9885-97ca9893d5b9")
 	)
 	(wire
 		(pts
@@ -4182,6 +4345,26 @@
 			(type default)
 		)
 		(uuid "8f710426-ca8a-48ab-985d-c0b4fa04e1f6")
+	)
+	(wire
+		(pts
+			(xy 25.4 176.53) (xy 26.67 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fe14a22-df14-406a-b2bd-26f4586321c5")
+	)
+	(wire
+		(pts
+			(xy 26.67 180.34) (xy 26.67 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "911164de-48ce-45a0-9d12-c39f347f2505")
 	)
 	(wire
 		(pts
@@ -4235,7 +4418,7 @@
 	)
 	(wire
 		(pts
-			(xy 278.13 158.75) (xy 278.13 157.48)
+			(xy 274.32 158.75) (xy 274.32 157.48)
 		)
 		(stroke
 			(width 0)
@@ -4455,7 +4638,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 157.48) (xy 278.13 157.48)
+			(xy 271.78 157.48) (xy 274.32 157.48)
 		)
 		(stroke
 			(width 0)
@@ -4733,6 +4916,16 @@
 		)
 		(uuid "11447e4f-17e8-4b1e-85d1-552f681b94b4")
 	)
+	(label "H_{DRIVER_RIGHT_CONTROL}"
+		(at 48.26 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1306daac-b1eb-4c0c-b600-7225493fc05f")
+	)
 	(label "Magnetic encoder to be attached to rear of motor"
 		(at 20.32 -20.32 0)
 		(effects
@@ -4753,6 +4946,16 @@
 		)
 		(uuid "2f6f0180-4669-4cfa-88d6-13ef5231dcab")
 	)
+	(label "M_{SENSE}"
+		(at 48.26 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "37c7793d-2909-43ed-9797-42338719be47")
+	)
 	(label "A current shunt for the motors (OCP)"
 		(at 20.32 -12.7 0)
 		(effects
@@ -4762,16 +4965,6 @@
 			(justify left bottom)
 		)
 		(uuid "536404ff-4693-4e28-9720-6e3578328063")
-	)
-	(label "H_{DRIVER_RIGHT_CONTROL}"
-		(at 48.26 59.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5a723577-4b87-4e51-9681-762885302de3")
 	)
 	(label "H_{DRIVER_RIGHT_EN}"
 		(at 173.99 105.41 180)
@@ -4791,7 +4984,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "95d38ab2-f6a7-484a-9fdb-8509a5c3c390")
+		(uuid "7bfff8dd-2e05-4f39-9640-150ae085a1f1")
 	)
 	(label "Needs a 12v, 5v and 3.3v power rails"
 		(at 20.32 -33.02 0)
@@ -4834,24 +5027,14 @@
 		(uuid "b420141d-4db5-4692-bec9-ecb679b892b9")
 	)
 	(label "H_{DRIVER_LEFT_CONTROL}"
-		(at 48.26 52.07 0)
+		(at 49.53 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "bb3b1fdb-ef76-4f09-9c69-90e272feef90")
-	)
-	(label "H_{DRIVER_LEFT_EN}"
-		(at 48.26 57.15 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c41a663f-b38c-4e57-b5f0-a7579a8ecfa6")
+		(uuid "bc2d8702-7f75-474f-a1b4-1340ddbb9a4b")
 	)
 	(label "M_{SENSE}"
 		(at 199.39 102.87 0)
@@ -4883,15 +5066,15 @@
 		)
 		(uuid "f068da99-d9ea-4c0c-abec-f23d433e0c70")
 	)
-	(label "M_{SENSE}"
-		(at 48.26 62.23 0)
+	(label "H_{DRIVER_LEFT_EN}"
+		(at 48.26 57.15 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "f5a475b3-dbea-4844-a3cd-9d28a03b5557")
+		(uuid "f73a0f1f-a6aa-4b8a-b82a-1723f516c7d3")
 	)
 	(label "Manual reset and boot buttons"
 		(at 20.32 -25.4 0)
@@ -4958,7 +5141,7 @@
 		)
 		(uuid "0133db31-85ce-41cc-8538-4d55dcf0ef12")
 	)
-	(hierarchical_label "5v"
+	(hierarchical_label "+3v3"
 		(shape input)
 		(at 26.67 17.78 180)
 		(effects
@@ -4991,17 +5174,6 @@
 		)
 		(uuid "0840f905-d1ce-41d4-a831-c52e5e92a6de")
 	)
-	(hierarchical_label "EXP_{02}"
-		(shape bidirectional)
-		(at 48.26 80.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0ac4256c-fea6-4442-a8f2-b54d19165eca")
-	)
 	(hierarchical_label "D_{STATUS}"
 		(shape input)
 		(at 57.15 170.18 0)
@@ -5013,6 +5185,17 @@
 		)
 		(uuid "0bf6fe9a-cb88-436b-9903-5438227b9573")
 	)
+	(hierarchical_label "SENS_{SCL}"
+		(shape input)
+		(at 109.22 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "137de631-48e5-406d-8933-08b820efb914")
+	)
 	(hierarchical_label "D_{ERROR}"
 		(shape input)
 		(at 57.15 172.72 0)
@@ -5023,6 +5206,17 @@
 			(justify left)
 		)
 		(uuid "1728293f-ff50-4b00-9191-41029ee9df53")
+	)
+	(hierarchical_label "BTN_{DOWN}"
+		(shape input)
+		(at 73.66 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "187f5574-8084-49d2-a018-ee937dac5fde")
 	)
 	(hierarchical_label "D_{ERROR}"
 		(shape output)
@@ -5068,28 +5262,6 @@
 		)
 		(uuid "33fa1fae-15fd-4058-9715-807c9223004a")
 	)
-	(hierarchical_label "BTN_{DOWN}"
-		(shape input)
-		(at 87.63 177.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "3a5baef9-016f-49c2-8ac3-7c6d9f5cfef5")
-	)
-	(hierarchical_label "+3v3_{EXP}"
-		(shape input)
-		(at 109.22 182.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "3cb6b40c-428f-4a21-9be4-0198dc30b440")
-	)
 	(hierarchical_label "IO33"
 		(shape input)
 		(at 48.26 90.17 0)
@@ -5122,17 +5294,6 @@
 			(justify left)
 		)
 		(uuid "5e2ec8b9-3088-43d1-99bc-90da3d2b2d59")
-	)
-	(hierarchical_label "D_{POWER}"
-		(shape output)
-		(at 48.26 64.77 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "650662b1-3eaa-45a6-96a0-c26740b69c22")
 	)
 	(hierarchical_label "DATA+"
 		(shape bidirectional)
@@ -5189,27 +5350,16 @@
 		)
 		(uuid "8f5a24a1-5c65-49a8-8375-e6b17b83f62b")
 	)
-	(hierarchical_label "SENS_{SCL}"
+	(hierarchical_label "BTN_{UP}"
 		(shape input)
-		(at 109.22 177.8 0)
+		(at 87.63 177.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "9141fad3-63cf-42ef-9833-97e4d975a6de")
-	)
-	(hierarchical_label "SENS_{SDA}"
-		(shape input)
-		(at 109.22 180.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "99be6aec-7630-4063-9522-567c8732946f")
+		(uuid "96f3f337-f161-4eab-88ec-fd136a66db9b")
 	)
 	(hierarchical_label "UART_{RX}"
 		(shape input)
@@ -5244,7 +5394,7 @@
 		)
 		(uuid "aba58e7e-ff8f-4ea3-98ec-67db21fa155d")
 	)
-	(hierarchical_label "+3v3_{EXP}"
+	(hierarchical_label "+3v3"
 		(shape output)
 		(at 255.27 101.6 0)
 		(effects
@@ -5266,16 +5416,16 @@
 		)
 		(uuid "b8599e4c-d05b-466f-a96c-375dcb5a8449")
 	)
-	(hierarchical_label "BTN_{UP}"
+	(hierarchical_label "SENS_{SDA}"
 		(shape input)
-		(at 73.66 175.26 0)
+		(at 109.22 177.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "c2a1b059-a531-433e-932c-be439282df55")
+		(uuid "c23ad172-e8d9-41d4-934e-9eb92aface3e")
 	)
 	(hierarchical_label "SENS_{SCL}"
 		(shape input)
@@ -5287,6 +5437,17 @@
 			(justify left)
 		)
 		(uuid "c37bb7fd-7a0b-40b7-a96f-e8dfa64bbdaf")
+	)
+	(hierarchical_label "D_{POWER}"
+		(shape output)
+		(at 48.26 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c93b7b5d-bfd8-4c77-9f36-b341b6c29aa0")
 	)
 	(hierarchical_label "BTN_{DOWN}"
 		(shape input)
@@ -5320,17 +5481,6 @@
 			(justify left)
 		)
 		(uuid "db432ed0-ecf4-4551-89ef-a2e1bc1200f3")
-	)
-	(hierarchical_label "EXP_{01}"
-		(shape bidirectional)
-		(at 48.26 82.55 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "db656db1-d95c-4fbf-b1a0-2d051a6f9c30")
 	)
 	(hierarchical_label "EN"
 		(shape input)
@@ -5420,74 +5570,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x01_Pin")
-		(at 21.59 175.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0b6db667-50e1-4f09-a2af-3459f1ac1f8b")
-		(property "Reference" "J3"
-			(at 17.526 174.752 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PWR_IN+"
-			(at 17.526 177.546 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "CustomLibrary:CONN_726386-2_TEC"
-			(at 21.59 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 21.59 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 21.59 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9ecda436-1286-4b6d-b29c-ad04bd6d1be3")
-		)
-		(instances
-			(project "ShutterRetroFit"
-				(path "/9a5464c1-cef5-401e-a9f9-0ccec90ac29c"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 278.13 158.75 0)
+		(at 274.32 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5496,7 +5580,7 @@
 		(fields_autoplaced yes)
 		(uuid "0ec95556-0c77-4611-9381-11b06c70945b")
 		(property "Reference" "#PWR08"
-			(at 278.13 165.1 0)
+			(at 274.32 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5505,7 +5589,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 278.13 163.83 0)
+			(at 274.32 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5513,7 +5597,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 278.13 158.75 0)
+			(at 274.32 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5522,7 +5606,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 278.13 158.75 0)
+			(at 274.32 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5531,7 +5615,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 278.13 158.75 0)
+			(at 274.32 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6502,9 +6586,9 @@
 		(at 68.58 170.18 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(uuid "42c8c55c-7618-43dc-b72e-2e23f832ad20")
 		(property "Reference" "R3"
 			(at 70.104 168.91 0)
@@ -6763,73 +6847,6 @@
 			(project "ShutterRetroFit"
 				(path "/9a5464c1-cef5-401e-a9f9-0ccec90ac29c"
 					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 278.13 152.4 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "552a7757-a2a9-4dc3-9ed0-3d285a47dab9")
-		(property "Reference" "H4"
-			(at 276.606 148.082 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 280.67 152.3999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 278.13 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 278.13 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 278.13 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b239986b-89ef-4b47-8d2e-efbe366700c4")
-		)
-		(instances
-			(project "ShutterRetroFit"
-				(path "/9a5464c1-cef5-401e-a9f9-0ccec90ac29c"
-					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -7365,6 +7382,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 20.32 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7b70a208-ae7f-47c7-bfb1-8e23fe53da85")
+		(property "Reference" "J6"
+			(at 18.034 182.118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_IN-"
+			(at 21.082 185.166 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 20.32 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 20.32 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 20.32 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f023ca66-d6e5-4e12-84bf-bc6b0cbdf83b")
+		)
+		(pin "2"
+			(uuid "4b1ae966-7be5-48df-b914-b31346e78b46")
+		)
+		(instances
+			(project ""
+				(path "/9a5464c1-cef5-401e-a9f9-0ccec90ac29c"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 153.67 177.8 0)
 		(unit 1)
@@ -7492,6 +7576,73 @@
 			(project "ShutterRetroFit"
 				(path "/9a5464c1-cef5-401e-a9f9-0ccec90ac29c"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 20.32 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "86d03759-29c5-4396-ab7f-9617a4823a21")
+		(property "Reference" "J3"
+			(at 18.288 174.244 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_IN+"
+			(at 21.336 171.196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 20.32 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 20.32 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 20.32 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "841a681c-f709-4965-b97c-2e37c5cbba3d")
+		)
+		(pin "2"
+			(uuid "9a0aa2b4-4886-4646-aa55-b53fbcdf9c8a")
+		)
+		(instances
+			(project ""
+				(path "/9a5464c1-cef5-401e-a9f9-0ccec90ac29c"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -7704,9 +7855,9 @@
 		(at 82.55 170.18 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(uuid "9df02939-bf06-4401-ac29-41104d7a52f9")
 		(property "Reference" "R4"
 			(at 85.09 168.9099 0)
@@ -7933,7 +8084,7 @@
 				)
 			)
 		)
-		(property "Value" "SENSOR"
+		(property "Value" "ACCESSORY"
 			(at 110.49 171.45 0)
 			(effects
 				(font
@@ -8855,79 +9006,13 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x01_Pin")
-		(at 21.59 181.61 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f7e1e842-1e9a-4367-ac37-56e6bd81eb5d")
-		(property "Reference" "J6"
-			(at 17.78 181.356 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PWR_IN-"
-			(at 17.78 183.896 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "CustomLibrary:CONN_726386-2_TEC"
-			(at 21.59 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 21.59 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 21.59 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d30578ec-1107-4e26-aa72-fa5d0c1eb3b0")
-		)
-		(instances
-			(project "ShutterRetroFit"
-				(path "/9a5464c1-cef5-401e-a9f9-0ccec90ac29c"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 85.09 182.88 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fb77f691-6ad0-4e5f-8702-836eb6f3ae8b")
 		(property "Reference" "C8"
@@ -8995,9 +9080,9 @@
 		(at 71.12 182.88 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fe50c5ab-31aa-4884-9736-e67df969e7e2")
 		(property "Reference" "C7"
