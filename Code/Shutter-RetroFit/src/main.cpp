@@ -11,10 +11,33 @@
 #define RAW_ANGLE_REG 0x0E
 #define READ_LEN 1
 #define GEAR_RATIO_IO 50.0 / 1.0
+
+// PCB PIN OUTS
+#define StatusLEDPin 18
+#define ErrorLEDPin 19
+#define PowerLEDPin 23
+
+#define PanelUpButtonPin 27
+#define PannelDownButtonPin 32
+#define ExpPin 33
+#define MotorSensePin 34
+
+#define HBridgeLeftEnPin 14
+#define HBridgeRightEnPin 13
+
+#define HBridgeLeftControlpin 25
+#define HBridgeRightControlPin 26
+
 void GET_ENCODER_STATUS(byte* buffer);
 bool VALIDATE_ENCODER_STATUS(byte *buffer);
 int read_angle();
 float calculate_degrees_deviation(float current_position);
+
+// PID related
+float calculate_PID();
+float calculate_proportion(float current, float destination);
+float calculate_integral();
+float calculate_derivative(); 
 
 float abs_pos = 0;
 
