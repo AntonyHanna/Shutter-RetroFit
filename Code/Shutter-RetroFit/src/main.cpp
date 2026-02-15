@@ -2,9 +2,10 @@
 #include <Wire.h>
 #include <String>
 #include <EEPROM.h>
+#include "../lib/PWMHelper/PWMHelper.h"
 
-#define i2c_scl 22
-#define i2c_sda 21
+#define I2C_SCL 22
+#define I2C_SDA 21
 
 #define AS5600_ADDR 0x36
 #define STATUS_REG 0x0B
@@ -13,20 +14,16 @@
 #define GEAR_RATIO_IO 50.0 / 1.0
 
 // PCB PIN OUTS
-#define StatusLEDPin 18
-#define ErrorLEDPin 19
-#define PowerLEDPin 23
+#define P_STATUS 18
+#define P_ERROR 19
+#define P_POWER 23
 
-#define PanelUpButtonPin 27
-#define PannelDownButtonPin 32
-#define ExpPin 33
-#define MotorSensePin 34
+#define P_UP 27
+#define P_DOWN 32
 
-#define HBridgeLeftEnPin 14
-#define HBridgeRightEnPin 13
+#define EXP_IO 33
 
-#define HBridgeLeftControlpin 25
-#define HBridgeRightControlPin 26
+
 
 void GET_ENCODER_STATUS(byte* buffer);
 bool VALIDATE_ENCODER_STATUS(byte *buffer);
@@ -46,25 +43,55 @@ void setup() {
   Wire.begin();
  // GET_ENCODER_STATUS(buffer);
 
+  digitalWrite(14, HIGH);
+  PWMHelper pwm(25, 5000);
+
+  pwm.enable();
+
  // VALIDATE_ENCODER_STATUS(buffer);
 }
 
 void loop() {
-  float angle = read_angle();
-  float deviation = calculate_degrees_deviation(angle);
+
+  // read status of panel buttons (interrupt)
+  // update panel lights
+  // flip between L and R control
+
+  // float angle = read_angle();
+  // float deviation = calculate_degrees_deviation(angle);
 
 
-  Serial.print(deviation, 2);
-  Serial.print(" + ");
-  Serial.print(abs_pos, 2);
-  Serial.print(" = ");
+  // Serial.print(deviation, 2);
+  // Serial.print(" + ");
+  // Serial.print(abs_pos, 2);
+  // Serial.print(" = ");
   
-  abs_pos += deviation;
+  // abs_pos += deviation;
   
-  Serial.println(abs_pos, 2);
+  // Serial.println(abs_pos, 2);
 
   // should calculate total degree of rotation
   
+}
+
+
+
+void FlipBridgeState() {
+  // if ()
+}
+
+void updatePanelLights()
+{
+  // if (current > maxCurrent) {
+    // set error light
+  //
+
+  /*
+    if (currentPos = -1) {
+      // digitalWrite(P_STATUS, HIGH)
+    }
+  */
+
 }
 
 void GET_ENCODER_STATUS(byte* buffer)
