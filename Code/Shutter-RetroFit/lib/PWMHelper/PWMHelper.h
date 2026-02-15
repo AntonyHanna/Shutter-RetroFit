@@ -11,6 +11,7 @@ class PWMHelper {
     int pin = -1;
     int freq = -1;
     int duty = -1;
+    mcpwm_config_t cfg;
 
     mcpwm_unit_t mcpwm_unit;
     mcpwm_timer_t mcpwm_timer;

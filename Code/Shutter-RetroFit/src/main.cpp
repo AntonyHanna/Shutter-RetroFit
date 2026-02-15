@@ -37,21 +37,36 @@ float calculate_integral();
 float calculate_derivative(); 
 
 float abs_pos = 0;
+PWMHelper a_pwm(25, 5000, 30);
+PWMHelper b_pwm(26, 5000, 30);
 
 void setup() {
   Serial.begin(115200);
   Wire.begin();
  // GET_ENCODER_STATUS(buffer);
 
-  digitalWrite(14, HIGH);
-  PWMHelper pwm(25, 5000);
+  pinMode(14, OUTPUT);
+  pinMode(13, OUTPUT);
 
-  pwm.enable();
+  pinMode(26, LOW);
+
+  digitalWrite(14, HIGH);
+  digitalWrite(13, HIGH);
+
+  a_pwm.enable();
+  b_pwm.disable();
 
  // VALIDATE_ENCODER_STATUS(buffer);
 }
 
 void loop() {
+  delay(5000);
+  a_pwm.disable();
+  b_pwm.enable();
+  delay(5000);
+  a_pwm.enable();
+  b_pwm.disable();
+
 
   // read status of panel buttons (interrupt)
   // update panel lights
