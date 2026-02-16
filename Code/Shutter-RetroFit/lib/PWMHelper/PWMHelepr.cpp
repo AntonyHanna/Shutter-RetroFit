@@ -24,7 +24,7 @@ PWMHelper::PWMHelper(int pwm_pin, int pwm_freq, int pwm_duty) {
 
 void PWMHelper::enable() {
     mcpwm_gpio_init(mcpwm_unit, mcpwm_singal, pin);
-    esp_err_t error = error = mcpwm_init(mcpwm_unit_t::MCPWM_UNIT_0, mcpwm_timer_t::MCPWM_TIMER_0, &cfg);
+    esp_err_t error = mcpwm_init(mcpwm_unit_t::MCPWM_UNIT_0, mcpwm_timer_t::MCPWM_TIMER_0, &cfg);
 
     if(error == ESP_OK) {
         Serial.printf("Successfully enabled MCPWM on pin %i\n", pin);
